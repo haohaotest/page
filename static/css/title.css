@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+a {
+    text-decoration: none;
+}
+body {
+    margin: auto;
+
+    width: 100%;
+
+    max-width: 1080px;
+    min-width: 320px;
+
+    line-height: 1.5;
+
+    background-color: #e3e1e1;
+
+    font-size: 14px;
+
+    /* 默認用apple的字體 不是就用後面兩個 */
+    font-family: -apple-system,Helvetica,sans-serif;
+}
+.top {
+    /*如果需要絕對定位在頂端 壓在圖上*/
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(213, 175, 140, 0.7);
+    max-width: 1080px;
+    min-width: 320px;
+}
+ul {
+    list-style: none;
+}
+.top ul li{
+    text-align: center;
+    line-height: 50px;
+    float: left;
+}
+
+/* 不知為何第三個li的選擇器沒用 而且這個還影響了第三個li */
+/* 所以這是第一跟第三個li的Style */
+.top ul li:nth-child(1){
+    width: 15%;
+    color: white;
+    font-size: 16px;
+    font-family: 標楷體;
+    background-color: rgba(213, 175, 140, 0.85);
+}
+
+/* LOGO圖的li */
+.top ul li:nth-child(2){
+    width: 70%;
+    overflow: hidden;
+    /*background-color: #9d9de5;*/
+    height: 50px;
+
+    position: relative;
+}
+
+/* LOGO圖 */
+.top ul li:nth-child(2) img{
+    /* 圖片對齊文字基線 */
+    vertical-align: middle;
+
+    /*border: 1px black solid;*/
+
+    /* 不加50%LOGO會太大*/
+    width: 50%;
+
+    /* 不加 父元素限制高度 圖片一樣過大 */
+    height: 48px;
+}
+.top ul a li:nth-child(3) {
+    width: 15%;
+    background-color: #c43232;
+}
+.top ul a {
+    color: black;
+}
+/* 更多的按鈕 三條線*/
+.moreBtn {
+    width: 100%;
+    height: 50px;
+
+    background: url(../images/more.png) no-repeat 20px 16px;
+    background-size: 20px 20px;
+}
+
+
+/* 隱藏的列表單 外圍最大div 等待點擊才出現 */
+.list-hidden {
+    /*
+        頂端列是脫標的 所以要往上距離50px 因為頂端列是50px
+        然後想再距離頂端列6px 所以共56px
+        下方也距離6px
+    */
+    margin-top: 56px;
+    margin-bottom: 6px;
+
+    /* 隱藏顯示狀態 */
+    display: none;
+
+    /* 行高20px 為了文字間距大一點 美觀 */
+    line-height: 20px;
+}
+/* 隱藏列表下的li */
+.list-hidden li{
+    line-height: 2;
+    font-size: 16px;
+}
+
+/* more按鈕 三條線的 */
+#aa:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,167 @@
+/* 裝焦點圖的div */
+.banner {
+    overflow: hidden;
+    width: 100%;
+
+    position: relative;
+
+    /* 針對若圖片寬度100%後 高度太高 但PC會太矮 */
+    /*height: 170px;*/
+    /*border: 3px black solid;*/
+}
+/* 第一個焦點圖div */
+.banner:nth-child(1) {
+    /* 跟頂端列重疊了 所以往下50px */
+    top: 50px;
+
+    /* 因為絕對定位 脫標 上去50px 其它物件就會蓋到原本位置 導致被蓋住 所以bottom外擴50px */
+    margin-bottom: 50px;
+}
+/* 焦點圖 */
+.banner img {
+    width: 100%;
+}
+
+/* 第二張焦點圖上的廣告資訊裝的div */
+.message {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    font-size: 20px;
+}
+/* 廣告資訊的p標籤字 */
+.message p {
+    font-family: 標楷體;
+}
+
+/* 廣告資訊的p標籤字 */
+.message p:nth-child(1) {
+    color: #444491;
+}
+
+/* 廣告資訊的p標籤字 */
+.message p:nth-child(2) {
+    color: #ab9797;
+}
+
+/* 廣告資訊的p標籤字 */
+.message p:nth-child(3) {
+    color: #d0bb87;
+}
+/* 廣告資訊的p標籤字 */
+.message p:nth-child(4) {
+    color: #d0bb87;
+}
+/* 廣告資訊的p標籤字 */
+.message p:nth-child(5) {
+    color: #d0bb87;
+}
+
+/* 裝n張焦點圖的div */
+.banner-wra {
+    /* 避免圖片與圖片之間有空白8px間隙 */
+    font-size: 0px;
+}
+
+/* 暫時代替gif 看太多很膩一直動很煩 */
+.temp {
+    width: 100%;
+    height: 175px;
+    background-color: #444491;
+}
+
+/* 裝作品集 價目表 聯絡我們div的div */
+.show-info {
+    background-color: #ab9797;
+    height: 150px;
+
+    position: relative;
+}
+
+/* 作品集 價目表的div */
+.goods {
+    width: 49.5%;
+    height: 150px;
+    background-color: #da9797;
+
+    position: relative;
+}
+.goods:nth-child(1) {
+    float: left;
+    position: relative;
+    height: 150px;
+}
+.goods:nth-child(1) img{
+    width: 100%;
+    height: 150px;
+}
+.goods:nth-child(2) {
+    position: absolute;
+    right: 30px;
+}
+
+/* 作品集 價目表裝字的 */
+.works-info {
+    position: absolute;
+
+    padding: 20px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    left: 10%;
+    /*transform: translateX(-50%);*/
+
+    color: rgba(206, 165, 128, 0.93);
+    font-size: 30px;
+    font-family: 標楷體;
+
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.show-info a:hover .works-info {
+    background-color: rgba(147, 144, 144, 0.85);
+}
+
+/* 聯絡我們 */
+.call-us {
+    /*width: 100%;*/
+    height: 170px;
+    /*background-color: #c43232;*/
+}
+.call-us .mid {
+    margin: auto;
+    width: 70%;
+    height: 170px;
+    /*background-color: wheat;*/
+
+    text-align: center;
+
+    font-size: 30px;
+}
+
+.call-us img {
+    margin-left: 10px;
+    vertical-align: middle;
+
+    width: 45px;
+    height: 45px;
+}
+
+.call-us p {
+    margin-top: 8px;
+    line-height: 76px;
+}
+
+/*
+    當隱藏列表顯示的時候 焦點圖要調整 距離頂端列的位置 因頂端列原本脫標要top: 50px; 才不會重疊
+    但中間穿插一個隱藏列表顯示的時候 就不用了
+    margin-bottom也是為了下方第二個焦點圖 不用在top: 50px; 因為這個第一張也用定位 一樣脫標 那下一張原本也會重疊過來
+*/
+.banner-wra .close {
+    top: 0px;
+    margin-bottom: 0px;
+}

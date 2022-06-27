@@ -1,0 +1,28 @@
+/* 內容外圍大div */
+.content {
+    /*
+        頂端列是脫標的 所以要往上距離50px 因為頂端列是50px
+        然後想再距離頂端列20px
+    */
+    margin-top: 70px;
+
+    /* 美觀 距離左右側15px 擬版心置中效果 */
+    margin-left: 15px;
+    margin-right: 15px;
+
+    /* 美觀 字體調大一點 */
+    font-size: 16px;
+
+    border: 1px black solid;
+}
+
+.content .mid {
+    text-align: center;
+}
+
+.content ul {
+    /* 付款方式資訊 弄一點距離間距 */
+    margin: 20px;
+
+    /*border: 1px black solid;*/
+}
